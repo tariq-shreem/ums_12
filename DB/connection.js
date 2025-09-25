@@ -1,17 +1,11 @@
 import { Sequelize } from "sequelize";
 
 export const sequelize = new Sequelize('freedb_UMSFREE', 'freedb_tariq123', 'Ten&5cE2N!$SAu?', {
-  host: 'sql.freedb.tech',
+  host: '130.162.54.212',
   port: 3306,
   dialect: 'mysql',
-  dialectOptions: {
-    ssl: {
-      require: true,
-      rejectUnauthorized: false
-    }
-  }
-});
 
+});
 
 export const connectDB = () => {
   sequelize.sync()
