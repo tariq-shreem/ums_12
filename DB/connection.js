@@ -3,7 +3,13 @@ import { Sequelize } from "sequelize";
 export const sequelize = new Sequelize('freedb_UMSFREE', 'freedb_tariq123', 'Ten&5cE2N!$SAu?', {
   host: 'sql.freedb.tech',
   port: 3306,
-  dialect: 'mysql' /* one of 'mysql' | 'postgres' | 'sqlite' | 'mariadb' | 'mssql' | 'db2' | 'snowflake' | 'oracle' */
+  dialect: 'mysql',
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false
+    }
+  }
 });
 
 
